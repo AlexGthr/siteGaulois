@@ -29,9 +29,15 @@ $recipesPotions->execute();
 $potions = $recipesPotions->fetchAll();
 
 foreach($potions as $potion) {
+
     echo "<tr>",
-            "<td score='row'>" . $potion['nom_potion'] . "</td>",
-            "<td score='row'>" . $potion['cout_potion'] . "</td>";
+    "<td score='row'>" . $potion['nom_potion'] . "</td>";
+
+    if ($potion['cout_potion'] == null) {
+        echo "<td score='row'> 0 </td>";
+    } else {
+        echo "<td score='row'>" . $potion['cout_potion'] . "</td>"; 
+    }
 }
 ?>
 
