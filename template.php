@@ -7,9 +7,13 @@
     <title><?= $title ?></title>
 </head>
 <body>
-    <div class="container">
     <header>
 
+        <figure>
+            <img src="img/header.png" width="100%">
+        </figure>
+
+        <div class="container">
         <nav class="nav nav-pills nav-fill mt-2">
             <a class="nav-link <?= $navBar1 ?>" aria-current="page" href="personnages.php">Personnages</a>
             <a class="nav-link <?= $navBar2 ?>" aria-current="page" href="index.php">Index</a>
